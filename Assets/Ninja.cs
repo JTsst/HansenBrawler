@@ -15,6 +15,18 @@ public class Ninja : Player
 
     public Foot RightFoot;
 
-    
+    public void Update()
+    {
+    if(Input.GetKeyDown(KeyCode.K))
+    {
+        Kick();
+    }
+    }
 
+    public void Kick()
+    {
+        Animator animator = GetComponent<Animator>();
+
+        animator.SetTrigger("Kick");
+    }
 }
